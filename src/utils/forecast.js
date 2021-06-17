@@ -11,9 +11,10 @@ const forecast = (lat, long, callback) => {
             //const data = JSON.parse(response.body)
             const data = body
             const temp = data.current.temperature
+            const humidity = data.current.humidity
             const feedata = data.current.feelslike
             //console.log(feedata)
-            callback(undefined, 'It feels like current temprature is ' + temp + ' and it feels like ' + feedata + ' % chance of rain')
+            callback(undefined, 'It feels like current temprature is ' + temp + ' and humidity like ' + humidity + ' and it feels like ' + feedata + ' % chance of rain')
             // const weatherdesc = data.current.weather_descriptions[0]
             // console.log(weatherdesc)
         }
